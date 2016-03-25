@@ -1,0 +1,16 @@
+
+<div class="container">
+ <h1>Get started</h1>
+
+          <%= bootstrap_form_for @projectmanager do |f| %>
+
+            <%= f.email_field :email, :required => true %>
+            <%= f.password_field :first_name, :required => true %>
+            <%= f.password_field :last_name, :required => true %>
+            <%= f.password_field :preferred_first_name, :required => true %>
+            <%= f.password_field :password, :required => true %>
+            <%= f.password_field :password_confirmation, :required => true %>
+            <%= f.url_field :profile_potrait %>
+            <%= f.submit "Next" %>
+          <% end %>
+</div>
