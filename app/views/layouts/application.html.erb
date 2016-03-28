@@ -7,8 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+  <%  if session[:user_id].present? && session[:user_id] =! nil %>
+<%= render 'layouts/navigation'%>
+<% end %>
+<%= render 'layouts/messages'%>
+<div class="container">
+  <%= yield %>
+</div>
 
 </body>
 </html>

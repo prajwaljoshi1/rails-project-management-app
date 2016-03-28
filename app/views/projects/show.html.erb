@@ -1,0 +1,14 @@
+<h1 align="center"><%= @project.name %></h1>
+
+<% @project.tasks.each do |task|  %>
+<div class="well">
+  <a href="#">
+
+    <h4><%= task.title %></h4>
+</a>
+<p>Description: <%= task.description %></p>
+<p>Deadline: <%= task.deadline %></p>
+<p>Accepted by: no-one</p>
+
+</div>
+<% end %>

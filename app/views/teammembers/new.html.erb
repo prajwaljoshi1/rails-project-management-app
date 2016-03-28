@@ -1,0 +1,16 @@
+
+<div class="container">
+   <h1>Invite Members</h1>
+   <% if @teammember.errors.any? %>
+    <ol>
+      <% @teammember.errors.full_messages.each do |msg| %>
+        <li><%=  msg %></li>
+      <% end %>
+    </ol>
+  <% end %>
+
+          <%= bootstrap_form_for @teammember do |f| %>
+            <%= f.email_field :email, :required => true %>
+            <%= f.submit "More" %> <%= f.submit "Done" %> <%= f.submit "Skip" %>
+          <% end %>
+</div>

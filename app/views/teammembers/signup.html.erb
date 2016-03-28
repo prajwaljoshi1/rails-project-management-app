@@ -1,17 +1,15 @@
 
 <div class="container">
-   <h1>Get started</h1>
-   <% if @projectmanager.errors.any? %>
+   <h1>Additional Detail</h1>
+   <% if @teammember.errors.any? %>
     <ol>
-      <% @projectmanager.errors.full_messages.each do |msg| %>
+      <% @teammember.errors.full_messages.each do |msg| %>
         <li><%=  msg %></li>
       <% end %>
     </ol>
   <% end %>
 
-          <%= bootstrap_form_for @projectmanager do |f| %>
-
-            <%= f.email_field :email, :required => true %>
+          <%= bootstrap_form_for @teammember do |f| %>
             <%= f.text_field :first_name, :required => true %>
             <%= f.text_field :last_name, :required => true %>
             <%= f.text_field :preferred_first_name, :required => true %>

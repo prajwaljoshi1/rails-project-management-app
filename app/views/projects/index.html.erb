@@ -1,0 +1,14 @@
+
+
+  <h2 align="center">All Projects</h2>
+  <% @projects.each do |project| %>
+  <a href="/projects/show/<%=project.id%>">
+    <div class="panel panel-primary">
+      <!-- Default panel contents -->
+      <div class="panel-heading"><%= project.name %></div>
+      <div class="panel-body">
+        <p><%= project.description %></p>
+      </div>
+    </div>
+  </a>
+  <% end %>

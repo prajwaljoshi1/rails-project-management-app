@@ -1,0 +1,22 @@
+<h2>Project manager Home</h2>
+
+<div class="container">
+
+  <h3><%= @project.name %></h3>
+
+  <h4><%= @project.description %></h4>
+
+<h3>TeamMembers invited for Project:</h3>
+<ul>
+  <% @teammembers.each do |teammember|  %>
+<li> <%= teammember.email %></li>
+    <% end  %>
+  </ul>
+
+<h3>Tasks:</h3>
+    <ul>
+    <% @tasks.each do |task|  %>
+    <li><%= task.title%></li>
+      <% end  %>
+    </ul>
+</div>
